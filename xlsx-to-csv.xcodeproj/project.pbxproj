@@ -14,13 +14,18 @@
 		18B684FB06944F2000CC6A1E /* PublicTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F406944F2000CC6A1E /* PublicTypes.h */; };
 		18B684FF06944F8800CC6A1E /* 4DPlugin-xlnt-csv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B684FE06944F8800CC6A1E /* 4DPlugin-xlnt-csv.cpp */; };
 		8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		D10367FF3021012000EC28BF /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D10367FE3021012000EC28BF /* libbz2.tbd */; };
+		D10368013021013500EC28BF /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D10368003021013500EC28BF /* liblzma.tbd */; };
+		D1036802302101F800EC28BF /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D10367F63020FF7500EC28BF /* libexpat.a */; };
+		D1036803302101F800EC28BF /* libjsoncpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D10367F73020FF7500EC28BF /* libjsoncpp.a */; };
+		D1036804302101F800EC28BF /* libxlsxio_read.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D152428B25496CF600760B3D /* libxlsxio_read.a */; };
+		D1036805302101F800EC28BF /* libxlsxio_write.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D10367F83020FF7500EC28BF /* libxlsxio_write.a */; };
+		D1036806302101F800EC28BF /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D152428E25496D2200760B3D /* libz.a */; };
+		D1036807302101F800EC28BF /* libzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D152428D25496D1400760B3D /* libzip.a */; };
 		D120937F13534DCC00A72CAA /* 4DPlugin-xlnt-csv.h in Headers */ = {isa = PBXBuildFile; fileRef = D120937E13534DCC00A72CAA /* 4DPlugin-xlnt-csv.h */; };
 		D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D130064E12F02D9700702C0E /* Cocoa.framework */; };
 		D13116A91A03ACB700DE1322 /* 4DPluginAPI.c in Sources */ = {isa = PBXBuildFile; fileRef = D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */; settings = {COMPILER_FLAGS = "-Wno-multichar"; }; };
 		D134D4AC1A030BA0008D14EF /* manifest.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = D134D4A91A030B06008D14EF /* manifest.json */; };
-		D152428C25496D0600760B3D /* libxlsxio_read.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D152428B25496CF600760B3D /* libxlsxio_read.a */; };
-		D152428F25496D3500760B3D /* libzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D152428D25496D1400760B3D /* libzip.a */; };
-		D152429025496D4100760B3D /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D152428E25496D2200760B3D /* libz.a */; };
 		D1ED4495255CE29E00E88D12 /* C_LONGINT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1ED4493255CE29E00E88D12 /* C_LONGINT.cpp */; };
 		D1ED4496255CE29E00E88D12 /* C_LONGINT.h in Headers */ = {isa = PBXBuildFile; fileRef = D1ED4494255CE29E00E88D12 /* C_LONGINT.h */; };
 		D1F8F5932526FCB800896EAF /* ARRAY_TEXT.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F8F58E2526FCB800896EAF /* ARRAY_TEXT.h */; };
@@ -28,8 +33,6 @@
 		D1F8F5952526FCB800896EAF /* C_TYPES.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F8F5902526FCB800896EAF /* C_TYPES.h */; };
 		D1F8F5962526FCB800896EAF /* ARRAY_TEXT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1F8F5912526FCB800896EAF /* ARRAY_TEXT.cpp */; };
 		D1F8F5972526FCB800896EAF /* C_TEXT.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F8F5922526FCB800896EAF /* C_TEXT.h */; };
-		D1F8F5982527006B00896EAF /* liblibstudxml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F8F58C2526FB9A00896EAF /* liblibstudxml.a */; };
-		D1F8F5992527006B00896EAF /* libxlnt.1.5.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F8F58D2526FB9A00896EAF /* libxlnt.1.5.0.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +58,12 @@
 		18B684F406944F2000CC6A1E /* PublicTypes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PublicTypes.h; sourceTree = "<group>"; };
 		18B684FE06944F8800CC6A1E /* 4DPlugin-xlnt-csv.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; path = "4DPlugin-xlnt-csv.cpp"; sourceTree = "<group>"; };
 		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D10367F63020FF7500EC28BF /* libexpat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libexpat.a; path = a/libexpat.a; sourceTree = "<group>"; };
+		D10367F73020FF7500EC28BF /* libjsoncpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjsoncpp.a; path = a/libjsoncpp.a; sourceTree = "<group>"; };
+		D10367F83020FF7500EC28BF /* libxlsxio_write.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxlsxio_write.a; path = a/libxlsxio_write.a; sourceTree = "<group>"; };
+		D10367FC3021001200EC28BF /* libxlnt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxlnt.a; path = a/libxlnt.a; sourceTree = "<group>"; };
+		D10367FE3021012000EC28BF /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		D10368003021013500EC28BF /* liblzma.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.tbd; path = usr/lib/liblzma.tbd; sourceTree = SDKROOT; };
 		D120937E13534DCC00A72CAA /* 4DPlugin-xlnt-csv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "4DPlugin-xlnt-csv.h"; sourceTree = "<group>"; };
 		D130064E12F02D9700702C0E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = 4DPluginAPI.c; sourceTree = "<group>"; };
@@ -79,11 +88,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D152429025496D4100760B3D /* libz.a in Frameworks */,
-				D152428C25496D0600760B3D /* libxlsxio_read.a in Frameworks */,
-				D1F8F5982527006B00896EAF /* liblibstudxml.a in Frameworks */,
-				D152428F25496D3500760B3D /* libzip.a in Frameworks */,
-				D1F8F5992527006B00896EAF /* libxlnt.1.5.0.a in Frameworks */,
+				D1036802302101F800EC28BF /* libexpat.a in Frameworks */,
+				D1036803302101F800EC28BF /* libjsoncpp.a in Frameworks */,
+				D1036804302101F800EC28BF /* libxlsxio_read.a in Frameworks */,
+				D1036805302101F800EC28BF /* libxlsxio_write.a in Frameworks */,
+				D1036806302101F800EC28BF /* libz.a in Frameworks */,
+				D1036807302101F800EC28BF /* libzip.a in Frameworks */,
+				D10368013021013500EC28BF /* liblzma.tbd in Frameworks */,
+				D10367FF3021012000EC28BF /* libbz2.tbd in Frameworks */,
 				D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +183,12 @@
 		D16FBB3C22A4C07E008F0416 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D10368003021013500EC28BF /* liblzma.tbd */,
+				D10367FE3021012000EC28BF /* libbz2.tbd */,
+				D10367FC3021001200EC28BF /* libxlnt.a */,
+				D10367F63020FF7500EC28BF /* libexpat.a */,
+				D10367F73020FF7500EC28BF /* libjsoncpp.a */,
+				D10367F83020FF7500EC28BF /* libxlsxio_write.a */,
 				D152428E25496D2200760B3D /* libz.a */,
 				D152428D25496D1400760B3D /* libzip.a */,
 				D152428B25496CF600760B3D /* libxlsxio_read.a */,
@@ -354,7 +372,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/lib",
+					a,
 					"$(PROJECT_DIR)/a",
 				);
 				LIBRARY_STYLE = Bundle;
@@ -405,7 +423,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/lib",
+					a,
 					"$(PROJECT_DIR)/a",
 				);
 				LIBRARY_STYLE = Bundle;
@@ -454,7 +472,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/lib",
+					a,
 					"$(PROJECT_DIR)/a",
 				);
 				LIBRARY_STYLE = Bundle;
