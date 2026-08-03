@@ -22,6 +22,8 @@
 		D1036805302101F800EC28BF /* libxlsxio_write.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D10367F83020FF7500EC28BF /* libxlsxio_write.a */; };
 		D1036806302101F800EC28BF /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D152428E25496D2200760B3D /* libz.a */; };
 		D1036807302101F800EC28BF /* libzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D152428D25496D1400760B3D /* libzip.a */; };
+		D10368093021037500EC28BF /* libxlnt.1.5.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F8F58D2526FB9A00896EAF /* libxlnt.1.5.0.a */; };
+		D103680B3021037500EC28BF /* libstudxml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D103680A3021037500EC28BF /* libstudxml.a */; };
 		D120937F13534DCC00A72CAA /* 4DPlugin-xlnt-csv.h in Headers */ = {isa = PBXBuildFile; fileRef = D120937E13534DCC00A72CAA /* 4DPlugin-xlnt-csv.h */; };
 		D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D130064E12F02D9700702C0E /* Cocoa.framework */; };
 		D13116A91A03ACB700DE1322 /* 4DPluginAPI.c in Sources */ = {isa = PBXBuildFile; fileRef = D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */; settings = {COMPILER_FLAGS = "-Wno-multichar"; }; };
@@ -64,6 +66,7 @@
 		D10367FC3021001200EC28BF /* libxlnt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxlnt.a; path = a/libxlnt.a; sourceTree = "<group>"; };
 		D10367FE3021012000EC28BF /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		D10368003021013500EC28BF /* liblzma.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.tbd; path = usr/lib/liblzma.tbd; sourceTree = SDKROOT; };
+		D103680A3021037500EC28BF /* libstudxml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstudxml.a; path = a/libstudxml.a; sourceTree = "<group>"; };
 		D120937E13534DCC00A72CAA /* 4DPlugin-xlnt-csv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "4DPlugin-xlnt-csv.h"; sourceTree = "<group>"; };
 		D130064E12F02D9700702C0E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = 4DPluginAPI.c; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D103680B3021037500EC28BF /* libstudxml.a in Frameworks */,
+				D10368093021037500EC28BF /* libxlnt.1.5.0.a in Frameworks */,
 				D1036802302101F800EC28BF /* libexpat.a in Frameworks */,
 				D1036803302101F800EC28BF /* libjsoncpp.a in Frameworks */,
 				D1036804302101F800EC28BF /* libxlsxio_read.a in Frameworks */,
@@ -183,6 +188,7 @@
 		D16FBB3C22A4C07E008F0416 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D103680A3021037500EC28BF /* libstudxml.a */,
 				D10368003021013500EC28BF /* liblzma.tbd */,
 				D10367FE3021012000EC28BF /* libbz2.tbd */,
 				D10367FC3021001200EC28BF /* libxlnt.a */,
