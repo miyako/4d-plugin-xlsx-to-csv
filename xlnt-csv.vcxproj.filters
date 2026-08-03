@@ -7,6 +7,7 @@
     <ClCompile Include="4DPlugin-xlnt-csv.cpp" />
     <ClCompile Include="4D Plugin API\Classes\ARRAY_TEXT.cpp" />
     <ClCompile Include="4D Plugin API\Classes\C_TEXT.cpp" />
+    <ClCompile Include="4D Plugin API\Classes\C_LONGINT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="4D Plugin API\4DPluginAPI.h">
@@ -28,6 +29,7 @@
     <ClInclude Include="4D Plugin API\Classes\C_TEXT.h" />
     <ClInclude Include="4D Plugin API\Classes\C_TYPES.h" />
     <ClInclude Include="4D Plugin API\Classes\ARRAY_TEXT.h" />
+    <ClInclude Include="4D Plugin API\Classes\C_LONGINT.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="4D Plugin API">
