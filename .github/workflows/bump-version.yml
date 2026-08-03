@@ -26,7 +26,7 @@ permissions:
 
 env:
   # ---- edit these two per-project ----
-  XCODE_PROJECT: xlnt-csv.xcodeproj
+  XCODE_PROJECT: xlsx-to-csv.xcodeproj
   # -------------------------------------
 
 jobs:

@@ -23,8 +23,15 @@ permissions:
 
 env:
   # ---- edit these per-project, everything else is generic ----
-  PRODUCT_NAME: xlnt-csv
-  XCODE_PROJECT: xlnt-csv.xcodeproj
+  # NOTE: the Windows (.vcxproj) and macOS (.xcodeproj) builds currently
+  # produce differently-named artifacts in this repo (xlnt-csv vs.
+  # xlsx-to-csv) - hence two separate names below instead of one shared
+  # PRODUCT_NAME. If the Windows project is ever renamed to match, these
+  # can be collapsed back into a single variable.
+  WIN_PRODUCT_NAME: xlnt-csv
+  MAC_PRODUCT_NAME: xlsx-to-csv
+  MAC_TARGET_NAME: xlsx-to-csv
+  XCODE_PROJECT: xlsx-to-csv.xcodeproj
   VCX_SOLUTION: xlnt-csv.sln
   MACOS_DEPLOYMENT_TARGET: '10.13'
   # --------------------------------------------------------------
@@ -71,7 +78,7 @@ jobs:
         with:
           name: windows-binaries
           path: |
-            test/Plugins/${{ env.PRODUCT_NAME }}.bundle/Contents/Windows64/${{ env.PRODUCT_NAME }}.4DX
+            test/Plugins/${{ env.WIN_PRODUCT_NAME }}.bundle/Contents/Windows64/${{ env.WIN_PRODUCT_NAME }}.4DX
           if-no-files-found: error
 
   build-macos:
@@ -125,7 +132,7 @@ jobs:
       - name: build macOS plugin (universal)
         run: |
           xcodebuild -project "${{ env.XCODE_PROJECT }}" \
-            -target "${{ env.PRODUCT_NAME }}" \
+            -target "${{ env.MAC_TARGET_NAME }}" \
             -configuration Default \
             ARCHS="arm64 x86_64" \
             ONLY_ACTIVE_ARCH=NO \
@@ -135,16 +142,16 @@ jobs:
       - name: verify universal binary
         run: |
           set -euo pipefail
-          BIN="test/Plugins/${{ env.PRODUCT_NAME }}.bundle/Contents/MacOS/${{ env.PRODUCT_NAME }}"
+          BIN="test/Plugins/${{ env.MAC_PRODUCT_NAME }}.bundle/Contents/MacOS/${{ env.MAC_PRODUCT_NAME }}"
           lipo -info "$BIN"
           lipo -info "$BIN" | grep -q "arm64" && lipo -info "$BIN" | grep -q "x86_64"
 
       - name: merge Windows binaries into the bundle
         run: |
           set -euo pipefail
-          BUNDLE="test/Plugins/${{ env.PRODUCT_NAME }}.bundle"
+          BUNDLE="test/Plugins/${{ env.MAC_PRODUCT_NAME }}.bundle"
           mkdir -p "$BUNDLE/Contents/Windows64"
-          cp "winbuild/${{ env.PRODUCT_NAME }}.4DX" "$BUNDLE/Contents/Windows64/${{ env.PRODUCT_NAME }}.4DX"
+          cp "winbuild/${{ env.WIN_PRODUCT_NAME }}.4DX" "$BUNDLE/Contents/Windows64/${{ env.WIN_PRODUCT_NAME }}.4DX"
           echo "BUNDLE_PATH=$BUNDLE" >> "$GITHUB_ENV"
 
       - name: codesign
@@ -161,14 +168,14 @@ jobs:
         run: |
           set -euo pipefail
           VERSION="${{ needs.version.outputs.version }}"
-          ZIP_PATH="${{ env.PRODUCT_NAME }}-${VERSION}.zip"
-          DMG_PATH="${{ env.PRODUCT_NAME }}-${VERSION}.dmg"
+          ZIP_PATH="${{ env.MAC_PRODUCT_NAME }}-${VERSION}.zip"
+          DMG_PATH="${{ env.MAC_PRODUCT_NAME }}-${VERSION}.dmg"
 
           # zip: cross-platform bundle (win + mac binaries together), what most users grab
           ditto -c -k --keepParent "$BUNDLE_PATH" "$ZIP_PATH"
 
           # dmg: mac-friendly, and the only format Apple lets us staple a ticket to
-          hdiutil create -format UDBZ -volname "${{ env.PRODUCT_NAME }}" -srcfolder "$BUNDLE_PATH" "$DMG_PATH"
+          hdiutil create -format UDBZ -volname "${{ env.MAC_PRODUCT_NAME }}" -srcfolder "$BUNDLE_PATH" "$DMG_PATH"
 
           xcrun notarytool submit "$ZIP_PATH" --keychain-profile "notarytool-profile" --keychain "$KEYCHAIN_PATH" --wait
           xcrun notarytool submit "$DMG_PATH" --keychain-profile "notarytool-profile" --keychain "$KEYCHAIN_PATH" --wait
