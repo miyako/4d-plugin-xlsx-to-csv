@@ -33,7 +33,7 @@ env:
   MAC_TARGET_NAME: xlsx-to-csv
   XCODE_PROJECT: xlsx-to-csv.xcodeproj
   VCX_SOLUTION: xlnt-csv.sln
-  MACOS_DEPLOYMENT_TARGET: '10.13'
+  MACOS_DEPLOYMENT_TARGET: '11.0'
   # --------------------------------------------------------------
 
 concurrency:
